@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Filipino comfort food at Madayaw Kitchen: beloved classics, fresh ingredients, and warm hospitality.">
+    <title>Madayaw Kitchen | Filipino Comfort Food</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+    <script src="Script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo"><span class="logo-mark" aria-hidden="true">M</span><span>Madayaw <em>Kitchen</em></span></a>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#about">Our Story</a>
+            <a href="#contact">Reservations</a>
+        </nav>
+        <div class="header-actions">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">☾</button>
+            <button id="cartButton" class="cart-button" type="button">Your order <span class="cart-icon" aria-hidden="true">↗</span><span class="cart-count" id="cartCount">0</span></button>
+        </div>
+    </header>
+
+    <main>
+       <section class="hero" id="home">
+    <div class="hero-content">
+        <p class="eyebrow"><span></span> A little taste of home</p>
+        <h1>Filipino comfort,<br><em>made with heart.</em></h1>
+        <p class="hero-copy">Gather around the table for the bold, joyful flavors of the Mindanaoan serve fresh and made with love.</p>
+        <div class="hero-actions">
+            <a href="#menu" class="btn">Explore the menu <span aria-hidden="true">↗</span></a>
+            <a href="#about" class="text-link">Get to know us <span aria-hidden="true">→</span></a>
+        </div>
+    </div>
+
+    <div class="hero-photo">
+        <video autoplay muted loop playsinline preload="auto">
+            <source src="SampleVideo.mp4" type="video/mp4">
+        </video>
+        <div class="photo-caption"><span>GOOD FOOD, GOOD COMPANY</span><strong>Pass the rice, please.</strong></div>
+    </div>
+
+    <div class="hero-stamp" aria-hidden="true"><span>MADE WITH</span><strong>♥</strong><span>IN THE PHILIPPINES</span></div>
+</section>
+        <section class="menu-section section-wrap" id="menu">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow"><span></span> From our kitchen</p>
+                    <h2>Filipino favorites,<br><em>for every craving.</em></h2>
+                </div>
+                <p class="heading-copy">A few much-loved classics, cooked the way they should be: generous, comforting, and full of flavor.</p>
+            </div>
+            <div class="category-filters" id="categoryFilters" aria-label="Filter menu by category">
+                <button class="active" type="button" data-category="all" aria-pressed="true">All Favorites</button>
+                <button type="button" data-category="The Filipino Canon" aria-pressed="false">The Filipino Canon</button>
+                <button type="button" data-category="The Talked About Wings" aria-pressed="false">The Talked About Wings</button>
+                <button type="button" data-category="Vegetables & Amp; Sides" aria-pressed="false">Vegetables & Amp Sides</button>
+                <button type="button" data-category="Drinks & amp; Closers" aria-pressed="false">Drinks & amp Closers</button>
+            </div>
+            <div class="food-grid" id="foodGrid" aria-live="polite"></div>
+            <p class="menu-note">Good things take time. Please let us know about any allergies when ordering.</p>
+        </section>
+
+        <section class="cart-section" id="cart">
+            <div class="cart-inner">
+                <div>
+                    <p class="eyebrow"><span></span> Your table, your picks</p>
+                    <h2>A little something<br><em>for the table.</em></h2>
+                    <p class="cart-intro">Add your favorites from the menu and we’ll get your order started.</p>
+                </div>
+                <div class="cart-panel">
+                    <div class="cart-panel-heading"><h3>Your order</h3><span><span id="cartCountLabel">0</span> items</span></div>
+                    <div id="cartItems"><p class="empty-cart">Your cart is waiting for something delicious.</p></div>
+                    <div class="cart-total"><span>Total</span><strong>₱<span id="cartTotal">0.00</span></strong></div>
+                    <button id="checkoutButton" class="btn btn-full" type="button">Place order <span aria-hidden="true">→</span></button>
+                    <p id="cartMessage" class="form-message" role="status"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section section-wrap" id="about">
+            <div class="about-photo">
+                <img src="LOGO.jpg">
+                <span class="about-photo-tag">A seat is always waiting for you.</span>
+            </div>
+            <div class="about-copy">
+                <p class="eyebrow"><span></span> Our story</p>
+                <h2>More than a meal.<br><em>A feeling of home.</em></h2>
+                <p>Madayaw Kitchen began with a simple idea shared by locals who love good food: 
+                    take the Filipino comfort favorites we all grew up with, make them with fresh, generous ingredients, and serve them with authentic Mindanaoan hospitality.</p>
+                <p>We bring people together over familiar flavors and heartfelt of every great Filipino kitchen starts with a table full of stories and ours began right here in Mindanao.</p>
+                <a href="#contact" class="text-link">Come gather with us <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="reservation-section" id="contact">
+            <div class="reservation-copy">
+                <p class="eyebrow"><span></span> Save you a seat?</p>
+                <h2>Good times start<br><em>around the table.</em></h2>
+                <p>Make it a date, bring the family, or just come hungry. We’ll take care of the rest.</p>
+                <div class="reservation-detail"><span aria-hidden="true"></span>Fresh Filipino favorites, made for sharing</div>
+            </div>
+            <form id="reservationForm">
+                <h3>Reserve a table</h3>
+                <p>Tell us when you’re coming by.</p>
+                <label for="customerName">Your name</label>
+                <input type="text" id="customerName" name="customerName" placeholder="e.g. Kerwin Noha" autocomplete="name" required>
+                <div class="form-row">
+                    <div><label for="reservationDate">Date</label><input type="date" id="reservationDate" name="reservationDate" required></div>
+                    <div><label for="reservationTime">Time</label><input type="time" id="reservationTime" name="reservationTime" required></div>
+                </div>
+                <label for="guestCount">Number of guests</label>
+                <input type="number" id="guestCount" name="guestCount" placeholder="e.g. 4" min="1" max="20" required>
+                <button type="submit" class="btn btn-full">Request a reservation <span aria-hidden="true">→</span></button>
+                <p id="reservationMessage" class="form-message" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#home" class="logo"><span class="logo-mark" aria-hidden="true">M</span><span>Madayaw <em>Kitchen</em></span></a><br>
+        <p1>Call us: 0927 888 8888<br>Email: madayawkitchen@gmail.com<br>Visit our Facebook: MadayawKitchen</p1>
+        <p>Good food. Great memories. Always room for one more.</p>
+        <div class="footer-bottom"><span>© 2026 Madayaw Kitchen. Made with love.</span><a href="#home">Back to top ↑</a></div>
+    </footer>
+</body>
+</html>
